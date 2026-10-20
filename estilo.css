@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #291447);
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 40px 20px;
+}
+h1 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+.instrucoes {
+    font-size: 18px;
+}
+.cartas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+.carta {
+    width: 220px;
+    height: 300px;
+    perspective: 1000px;
+}
+.interior {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    /* Mantém o efeito tridimensional */
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease;
+}
+.carta:hover .interior {
+    transform: rotateY(180deg);
+}
+.frente, .verso {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 20px;
+    /* Esconde o lado de trás de cada face */
+    backface-visibility: hidden;
+    box-shadow: 0 8px 20px #0004;
+}
+.frente {
+    background: #a77be8;
+    border: 3px solid white;
+}
+.presente {
+    font-size: 80px;
+}
+.verso {
+    background: #fff0c9;
+    color: #39204f;
+    border: 3px solid #f8d98b;
+    transform: rotateY(180deg);
+}
+.premio {
+    font-size: 65px;
+}
+.verso h2 {
+    font-size: 23px;
+}
